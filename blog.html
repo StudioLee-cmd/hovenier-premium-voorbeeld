@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="nl" class="lenis lenis-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GroenMeester Voorbeeld — Blog</title>
+  <meta name="description" content="Lees onze laatste artikelen over tuinontwerp, beplanting en tuinonderhoud — praktische tips van ervaren hoveniers uit Amsterdam.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-strip"></div>
+
+  <!-- ======================== HEADER ======================== -->
+  <header class="header">
+    <a href="index.html" class="header-logo visible" aria-label="Home">
+      <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="60" rx="4" fill="var(--color-primary)" opacity="0.9"/>
+        <text x="100" y="38" text-anchor="middle" fill="var(--color-text)" font-family="var(--font-display)" font-size="24" font-weight="900">LOGO</text>
+      </svg>
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">Over Ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="label-open">Menu</span>
+      <span class="label-close">Close</span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-panel">
+      <nav class="mobile-menu-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">Over Ons</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ======================== MAIN CONTENT ======================== -->
+  <div class="page-wrapper">
+    <div class="page-bg">
+
+      <!-- ====== PAGE HERO ====== -->
+      <section class="section-padding" style="padding-top:20vh;padding-bottom:var(--sp-5)">
+        <h1 class="page-hero-title font-display" style="font-size:clamp(3rem,10vw,8rem);line-height:0.92;letter-spacing:-0.02em">
+          Groene Kennis
+        </h1>
+        <p class="page-hero-desc text-s" style="max-width:40rem;margin-top:var(--sp-4);opacity:0.7">
+          Tips, inzichten en seizoensadvies over tuinontwerp, onderhoud en beplanting. Praktische kennis voor tuinliefhebbers.
+        </p>
+      </section>
+
+      <!-- ====== CLUSTER OVERVIEW (topic clusters) ====== -->
+      <section class="section-padding section-reveal" style="padding-bottom:var(--sp-7)">
+        <div class="cluster-grid">
+
+          <!-- Cluster 1: Tuinontwerp -->
+          <a href="#" class="cluster-card" data-cluster-filter="cluster-ontwerp">
+            <div class="cluster-icon">
+              <iconify-icon icon="lucide:leaf" width="32" height="32"></iconify-icon>
+            </div>
+            <h3 class="cluster-title">Tuinontwerp</h3>
+            <span class="cluster-count">[4] artikelen</span>
+          </a>
+
+          <!-- Cluster 2: Onderhoud -->
+          <a href="#" class="cluster-card" data-cluster-filter="cluster-onderhoud">
+            <div class="cluster-icon">
+              <iconify-icon icon="lucide:scissors" width="32" height="32"></iconify-icon>
+            </div>
+            <h3 class="cluster-title">Onderhoud</h3>
+            <span class="cluster-count">[5] artikelen</span>
+          </a>
+
+          <!-- Cluster 3: Beplanting -->
+          <a href="#" class="cluster-card" data-cluster-filter="cluster-beplanting">
+            <div class="cluster-icon">
+              <iconify-icon icon="lucide:flower-2" width="32" height="32"></iconify-icon>
+            </div>
+            <h3 class="cluster-title">Beplanting</h3>
+            <span class="cluster-count">[6] artikelen</span>
+          </a>
+
+          <!-- Cluster 4: Bestrating & Terrassen -->
+          <a href="#" class="cluster-card" data-cluster-filter="cluster-bestrating">
+            <div class="cluster-icon">
+              <iconify-icon icon="lucide:sun" width="32" height="32"></iconify-icon>
+            </div>
+            <h3 class="cluster-title">Bestrating & Terrassen</h3>
+            <span class="cluster-count">[3] artikelen</span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ====== CLUSTER FILTERS ====== -->
+      <section class="section-padding" style="padding-bottom:var(--sp-4)">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Alle Artikelen</button>
+          <button class="filter-btn" data-filter="cluster-ontwerp">Tuinontwerp</button>
+          <button class="filter-btn" data-filter="cluster-onderhoud">Onderhoud</button>
+          <button class="filter-btn" data-filter="cluster-beplanting">Beplanting</button>
+          <button class="filter-btn" data-filter="cluster-bestrating">Bestrating & Terrassen</button>
+        </div>
+      </section>
+
+      <!-- ====== BLOG ARTICLES GRID ====== -->
+      <section class="section-padding" style="padding-bottom:var(--sp-8);min-height:300px">
+        <div class="work-grid blog-grid grid-3">
+
+          <!-- PILLAR ARTICLE: Tuinontwerp (featured/large) -->
+          <div class="grid-item-enter blog-item blog-item--pillar" data-category="cluster-ontwerp" style="grid-column: span 2">
+            <a href="blog/artikel.html" class="blog-card blog-card--featured">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Hoofdartikel — tuinontwerp met beplantingsplan</div>
+                <span class="blog-badge blog-badge--pillar">Pillar</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-cluster-tag">Tuinontwerp</span>
+                  <span>[1 april 2026] &middot; [14 min lezen]</span>
+                </div>
+                <h2 class="blog-card-title blog-card-title--large">De Ultieme Gids voor Tuinontwerp in 2026</h2>
+                <p class="blog-card-excerpt">Alles wat je moet weten over een geslaagd tuinontwerp — van eerste schets tot beplantingsplan. Stijlen, kosten, seizoenstiming en de meest gemaakte fouten.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Tuinontwerp -->
+          <div class="grid-item-enter blog-item" data-category="cluster-ontwerp">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Kleine tuin groter laten lijken — perspectief</div>
+                <span class="blog-badge">Tuinontwerp</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[28 maart 2026] &middot; [6 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">7 trucs om een kleine tuin groter te laten lijken</h3>
+                <p class="blog-card-excerpt">Slimme ontwerptips die werken in elke stadstuin — van diagonale lijnen tot spiegeleffecten.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Onderhoud -->
+          <div class="grid-item-enter blog-item" data-category="cluster-onderhoud">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Snoeikalender — hovenier knipt haag</div>
+                <span class="blog-badge">Onderhoud</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[25 maart 2026] &middot; [8 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">De complete snoeikalender: wanneer snoeien per plant</h3>
+                <p class="blog-card-excerpt">Maand voor maand: welke planten, hagen en bomen wanneer gesnoeid moeten worden voor optimale groei.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Beplanting -->
+          <div class="grid-item-enter blog-item" data-category="cluster-beplanting">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Vaste planten borders — kleurenpalet</div>
+                <span class="blog-badge">Beplanting</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[22 maart 2026] &middot; [7 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">De beste vaste planten voor een onderhoudsarme tuin</h3>
+                <p class="blog-card-excerpt">Welke vaste planten bloeien lang, zijn winterhard en vragen weinig aandacht? Onze top 15 voor de Nederlandse tuin.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Bestrating -->
+          <div class="grid-item-enter blog-item" data-category="cluster-bestrating">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Terras materialen — hout, composiet, natuursteen</div>
+                <span class="blog-badge">Bestrating & Terrassen</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[20 maart 2026] &middot; [6 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">Hout, composiet of natuursteen? Het juiste terrasmateriaal kiezen</h3>
+                <p class="blog-card-excerpt">Een eerlijke vergelijking van de populairste terras materialen op prijs, onderhoud en uitstraling.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Onderhoud -->
+          <div class="grid-item-enter blog-item" data-category="cluster-onderhoud">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Gazon onderhoud — maaien en bemesten</div>
+                <span class="blog-badge">Onderhoud</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[18 maart 2026] &middot; [5 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">Een stralend gazon het hele jaar door: het onderhoudsschema</h3>
+                <p class="blog-card-excerpt">Maaien, bemesten, beluchten en doorzaaien — per seizoen uitgelegd voor een groen en gezond gazon.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Beplanting -->
+          <div class="grid-item-enter blog-item" data-category="cluster-beplanting">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Haagplanten — soorten vergelijken</div>
+                <span class="blog-badge">Beplanting</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[15 maart 2026] &middot; [7 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">Welke haagplant past bij jouw tuin? De grote vergelijking</h3>
+                <p class="blog-card-excerpt">Buxus, taxus, laurier of beuk — wij vergelijken de populairste haagplanten op groeisnelheid, privacy en onderhoud.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Ontwerp -->
+          <div class="grid-item-enter blog-item" data-category="cluster-ontwerp">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Tuinverlichting — sfeervolle avondtuin</div>
+                <span class="blog-badge">Tuinontwerp</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[12 maart 2026] &middot; [5 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">Tuinverlichting: zo creëer je sfeer na zonsondergang</h3>
+                <p class="blog-card-excerpt">Van padverlichting tot accentspots — praktische tips voor een tuin die ook 's avonds uitnodigt.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Cluster article: Bestrating -->
+          <div class="grid-item-enter blog-item" data-category="cluster-bestrating">
+            <a href="blog/artikel.html" class="blog-card">
+              <div class="blog-card-image">
+                <div class="placeholder-img" style="aspect-ratio:16/9">Overkapping tuin — houten pergola</div>
+                <span class="blog-badge">Bestrating & Terrassen</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>[10 maart 2026] &middot; [6 min lezen]</span>
+                </div>
+                <h3 class="blog-card-title">Overkapping in de tuin: vergunning, materialen en kosten</h3>
+                <p class="blog-card-excerpt">Alles over tuinoverkappingen — wanneer je een vergunning nodig hebt en wat de opties zijn.</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer logo divider -->
+      <div class="footer-logo-wrap">
+        <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <text x="720" y="160" text-anchor="middle" font-family="var(--font-display)" font-size="180" font-weight="900" fill="currentColor" opacity="0.15">GROENMEESTER</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="grid-2">
+      <div>
+        <h2 class="footer-heading">Laten we samen <span class="accent">groeien</span></h2>
+      </div>
+      <div>
+        <div class="footer-contact">
+
+          <a href="mailto:info@groenmeester-voorbeeld.nl">info@groenmeester-voorbeeld.nl</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 GroenMeester Voorbeeld</span>
+      <div><a href="#">Privacy</a> &middot; <a href="#">Voorwaarden</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- StudioLee credit badge -->
+  <a href="https://www.studiolee.nl" target="_blank" rel="nofollow noopener" style="position:fixed;bottom:14px;right:14px;z-index:9999;background:rgba(0,0,0,.85);color:#fff;padding:9px 18px;border-radius:99px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s,background .2s;display:inline-flex;align-items:center;gap:6px" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#cdfb52';this.style.color='#0a0a0a'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(0,0,0,.85)';this.style.color='#fff'">Speciaal gemaakt voor hoveniers door StudioLee.nl &nearr;</a>
+
+</body>
+</html>
